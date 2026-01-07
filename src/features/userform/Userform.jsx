@@ -1,5 +1,7 @@
 import { useState } from "react";
 import Header from "../../components/Header";
+import Footer from "../../components/Footer";
+
 export const UserForm = () => {
   const person = {
     name: "",
@@ -50,14 +52,15 @@ export const UserForm = () => {
   };
 
   return (
-    <div>
+    <div className="flex flex-col min-h-screen">
       <Header />
-      <div className="w-full max-w-md mx-auto bg-white rounded-2xl shadow-lg p-6">
+      <main className="flex-1 justify-center items-center bg-gray-700 flex">
+ <div className="w-full max-w-md mx-auto bg-white rounded-2xl shadow-lg p-6">
         <h2 className="text-xl font-semibold text-gray-800 mb-6">
           Create User
         </h2>
 
-        <form onSubmit={handleSubmit} className="space-y-5">
+ <form onSubmit={handleSubmit} className="space-y-5">
           {/* Name */}
           <div>
             <label className="block text-sm font-medium text-gray-600 mb-1">
@@ -120,7 +123,12 @@ export const UserForm = () => {
             Create User
           </button>
         </form>
+       
       </div>
+
+      </main>
+
+      <Footer/>
     </div>
   );
 };

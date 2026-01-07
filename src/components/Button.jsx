@@ -12,7 +12,7 @@ export const Button = ({
     edit:
       "bg-linear-to-br from-black to-yellow-600",
     delete:
-      "bg-linear-to-br from-red-700 to-black",
+      "bg-linear-to-br from-red-600 to-black",
   };
 
   return (
